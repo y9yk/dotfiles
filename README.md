@@ -6,6 +6,14 @@ I've activated only the option I'm currently using.
 ## Requirements
 
 
+## Quick Install
+
+```
+echo "" >> .dummies
+wget http://bit.ly/envshy9yk
+bash envshy install all
+```
+
 ## Installation
 
 ```
