@@ -6,27 +6,12 @@ I've activated only the option I'm currently using.
 ## Requirements
 
 
-## Quick Install
+## Installation
 
 ```
 echo "" >> .dummies
 wget http://bit.ly/envshy9yk
-bash envshy install all
-```
-
-## Installation
-
-```
-# backup previous dotfiles
-mkdir -p ~/.dotfiles.backup
-mv ~/.[^.]* ~/.dotfiles.backup/
-
-# get new dotfiles
-git clone https://github.com/y9yk/dotfiles.git
-mv dotfiles/* dotfiles/.[^.]* ~
-rmdir dotfiles
-git submodule init
-git submodule update
+bash envshy9yk install all
 ```
 
 ## Features
