@@ -16,6 +16,7 @@ set -euo pipefail
 # variables
 # ------------------------------
 home="$HOME"
+bckp="$home/dotfiles.backup"
 
 # ------------------------------
 # functions
@@ -45,16 +46,18 @@ install_env() {
     echo '------------------------'
     set -x # start debug mode
 
-    mkdir -p ~/dotfiles.backup
-    mv ~/.[^.]* ~/dotfiles.backup/
+    if [ ! -d "$bckp" ] ; then
+        mkdir -p "$bckp"
+        mv $home/.[^.]* $bckp/
+    fi
     git clone https://github.com/y9yk/dotfiles.git
-    mv dotfiles/* dotfiles/.[^.]* ~
+    mv dotfiles/* dotfiles/.[^.]* $home/~
     rmdir dotfiles
     git submodule init
     git submodule update
 
     # for vim-pathogen
-    cp ~/.vim/autoload/pathogen.vim ~/.vim/bundle/vim-pathogen/autoload/
+    cp $home/.vim/autoload/pathogen.vim $home/.vim/bundle/vim-pathogen/autoload/
 
     # for ubuntu 14.04
     sudo apt-get update

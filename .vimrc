@@ -162,19 +162,19 @@ set ai "Auto indent
 set wrap "Wrap lines
 
 
-" """"""""""""""""""""""""""""""
-" " 6. Visual mode related
-" """"""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""
+" 6. Visual mode related
+""""""""""""""""""""""""""""""
 
 
-" """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" " 7. Moving around, tabs, windows and buffers
-" """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" 7. Moving around, tabs, windows and buffers
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
-" """"""""""""""""""""""""""""""
-" " 7. Status line
-" """"""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""
+" 7. Status line
+""""""""""""""""""""""""""""""
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -205,14 +205,14 @@ autocmd BufWrite *.markdown :call ReplaceQuotes()
 autocmd BufWrite *.md :call ReplaceQuotes()
 
 
-" """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" " 9. vimgrep searching and cope displaying
-" """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" 9. vimgrep searching and cope displaying
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
-" """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" " 10. Spell checking
-" """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" 10. Spell checking
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -241,10 +241,6 @@ imap <leader>d <C-R>=strftime("%Y-%m-%d")<CR>
 " Remove trailing whitespaces
 map <F8> :call DeleteTrailingWS() <CR>
 
-" [Source .vimrc file in pwd](http://www.alexeyshmalko.com/2014/using-vim-as-c-cpp-ide/)
-set exrc
-set secure
-
 " Sets line number
 set number
 
@@ -272,9 +268,3 @@ autocmd BufNewFile,BufRead *.md set filetype=markdown
 map <C-n> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif " close vim if only nerdtree is left
 let NERDTreeShowHidden=1  " show hidden files
-
-" [vim-markdown](https://github.com/plasticboy/vim-markdown)
-let g:vim_markdown_math=1
-
-" https://github.com/embear/vim-localvimrc
-let g:localvimrc_persistent=2
