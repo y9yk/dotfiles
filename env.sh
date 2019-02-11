@@ -24,16 +24,17 @@ install_pyenv() {
     echo '---------------'
     echo ' pyenv install '
     echo '---------------'
-    set -x # start debug mode
-    $(which curl) https://pyenv.run | $(which bash) # pyenv, pyenv-virtualenv installation
+    set -x # start debug mode 
+    # pyenv, pyenv-virtualenv installation
+    curl https://pyenv.run | bash
     
     export PYENV_ROOT="$home/.pyenv"
     export PATH="$PYENV_ROOT/bin:$PATH"
     eval "$(pyenv init -)"
     eval "$(pyenv virtualenv-init -)"
 
-    $(which pyenv) install 3.5.2
-    $(which pyenv) global 3.5.2
+    pyenv install 3.5.2
+    pyenv global 3.5.2
     
     set +x
 }
