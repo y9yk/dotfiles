@@ -5,7 +5,6 @@ I've activated only the option I'm currently using.
 
 ## Requirements
 
-- Vim 7.3.598+ (due to YouCompleteMe)
 
 ## Installation
 
