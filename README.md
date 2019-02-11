@@ -5,8 +5,8 @@ I've activated only the option I'm currently using.
 
 ## Requirements
 
-Vim 7.4.1578 (due to [YouCompleteMe](https://github.com/Valloric/YouCompleteMe.git)
-[This guide](https://github.com/Valloric/YouCompleteMe/wiki/Building-Vim-from-source) will help.
+- Vim 7.4.1578 (due to [YouCompleteMe](https://github.com/Valloric/YouCompleteMe.git))
+- [This guide](https://github.com/Valloric/YouCompleteMe/wiki/Building-Vim-from-source) will help.
 
 ## Installation
 
