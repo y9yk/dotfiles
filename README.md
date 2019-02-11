@@ -1,7 +1,7 @@
 # Dotfiles
 
-My dotfiles referring to (Lucy's dotfiles)[https://github.com/e9t/dotfiles].
-(I've activated only the option I'm currently using)
+My dotfiles referring to [Lucy's dotfiles](https://github.com/e9t/dotfiles).
+I've activated only the option I'm currently using.
 
 ## Requirements
 
