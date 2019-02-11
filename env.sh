@@ -50,11 +50,27 @@ install_env() {
     # for vim-pathogen
     cp $home/.vim/autoload/pathogen.vim $home/.vim/bundle/vim-pathogen/autoload/
 
-    # for ubuntu 14.04
-    sudo apt-get update
-    sudo apt-get install tmux
+    # for tmux (ubuntu 14.04)
+    sudo apt-get update && sudo apt-get install tmux
     
     set +x
+}
+
+install_youcompleteme() {
+
+    # # for youcompleteme (ubuntu 14.04)
+    # sudo apt-get update && sudo apt install build-essential cmake3 python3-dev
+    # if [ ! "$(pyenv --version | awk '{print $2}')" == "1.2.9" ] ; then
+    #     install_pyenv
+    #     export PYENV_ROOT="$home/.pyenv"
+    #     export PATH="$PYENV_ROOT/bin:$PATH"
+    #     eval "$(pyenv init - --no-rehash)"
+    #     eval "$(pyenv virtualenv-init -)"
+    # fi
+    export PYTHON_CONFIGURE_OPTS="--enable-shared"
+    pyenv install 3.5.2
+    pyenv global 3.5.2
+    cd $home/.vim/bundle/YouCompleteMe && git submodule update --init --recursive && python install.py
 }
 
 install() {
@@ -69,7 +85,7 @@ case "$1" in
     install) cmd=$1 ;;
     *)
         shift
-        echo "usage: $0 [install] [pyenv|env|all]"
+        echo "usage: $0 [install] [youcompleteme|pyenv|env|all]"
         exit 1
 esac
 shift
@@ -79,5 +95,6 @@ for name; do
         all) install ;;
         env) install_env ;;
         pyenv) install_pyenv ;;
+        youcompleteme) install_youcompleteme ;;
     esac
 done
