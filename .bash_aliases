@@ -63,15 +63,15 @@ fi
 # os specific
 if [ "$(uname)" == "Darwin" ]; then
     if [ -f "$HOME/.bash_macosx" ]; then
-        . $home/.bash_macosx
+        . $HOME/.bash_macosx
     fi
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
     if [ -f "$HOME/.bash_linux" ]; then
-        . $home/.bash_linux
+        . $HOME/.bash_linux
     fi
 fi
 
 # local bash
 if [ -f "$HOME/.bash_local" ]; then
-    . $home/.bash_local
+    . $HOME/.bash_local
 fi
