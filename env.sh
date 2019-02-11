@@ -2,8 +2,8 @@
 # Author : y9yk
 # Usage:
 #
-#   wget http://bit.ly/envy9yk
-#   envy9yk install all
+#   http://bit.ly/envshy9yk
+#   bash envysh9yk install all
 # -----------------------------------------------
 
 set -euo pipefail
@@ -44,13 +44,16 @@ install_env() {
     echo '------------------------'
     set -x # start debug mode
 
-    mkdir -p ~/.dotfiles.backup
-    mv ~/.[^.]* ~/.dotfiles.backup/
+    mkdir -p ~/dotfiles.backup
+    mv ~/.[^.]* ~/dotfiles.backup/
     git clone https://github.com/y9yk/dotfiles.git
     mv dotfiles/* dotfiles/.[^.]* ~
     rmdir dotfiles
     git submodule init
     git submodule update
+
+    # for vim-pathogen
+    cp ~/.vim/autoload/pathogen.vim ~/.vim/bundle/vim-pathogen/autoload/
 
     # for ubuntu 14.04
     sudo apt-get update
@@ -64,6 +67,9 @@ install() {
     install_pyenv
 }
 
+# ------------------------------
+# main
+# ------------------------------
 case "$1" in
     install) cmd=$1 ;;
     *)
