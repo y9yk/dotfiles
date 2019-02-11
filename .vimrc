@@ -31,6 +31,8 @@ execute pathogen#infect()
 " For Vundle
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
+" Plugin list
+call vundle#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 1. General
