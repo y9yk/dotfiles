@@ -3,18 +3,16 @@
 My dotfiles referring to [Lucy's dotfiles](https://github.com/e9t/dotfiles).
 I've activated only the option I'm currently using.
 
-## Requirements
-
-
 ## Installation
 
+- Download [env.sh](http://bit.ly/envshy9yk) file
+- Set the <pre>HOME</pre> variable if necessary (e.g., home="$HOME")
+- Execute the script (usage : bash envshy9yk install all)
+
 ```
-echo "" >> .dummies
 wget http://bit.ly/envshy9yk
 bash envshy9yk install all
 ```
-
-## Features
 
 ## License
 
