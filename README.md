@@ -14,7 +14,7 @@ mkdir -p ~/.dotfiles.backup
 mv ~/.[^.]* ~/.dotfiles.backup/
 
 # get new dotfiles
-git clone https://github.com/e9t/dotfiles.git
+git clone https://github.com/y9yk/dotfiles.git
 mv dotfiles/* dotfiles/.[^.]* ~
 rmdir dotfiles
 git submodule init
