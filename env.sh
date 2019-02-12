@@ -42,7 +42,7 @@ install_env() {
         mv $home/.[^.]* $bckp/
     fi
     git clone https://github.com/y9yk/dotfiles.git
-    mv dotfiles/* dotfiles/.[^.]* $home/~
+    mv dotfiles/* dotfiles/.[^.]* $home/
     rmdir dotfiles
     git submodule init
     git submodule update
