@@ -51,7 +51,7 @@ install_env() {
     cp $home/.vim/autoload/pathogen.vim $home/.vim/bundle/vim-pathogen/autoload/
 
     # for tmux (ubuntu 14.04)
-    sudo apt-get update && sudo apt-get install tmux
+    # sudo apt-get update && sudo apt-get install tmux
     
     set +x
 }
@@ -74,7 +74,7 @@ install_youcompleteme() {
 }
 
 install() {
-    install_env
+    # install_env
     install_pyenv
 }
 
