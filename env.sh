@@ -74,8 +74,8 @@ install_youcompleteme() {
 }
 
 install() {
-    # install_env
-    install_pyenv
+    install_env
+    # install_pyenv
 }
 
 # ------------------------------
